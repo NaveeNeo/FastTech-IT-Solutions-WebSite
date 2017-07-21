@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>FastTech Live Chat</title>
+	<style>
+		#mssg
+		{
+			width:310px;
+			height:50px;
+		}
+		#outer 
+		{ 
+			border : 2px solid green;
+			width:310px;
+			height:400px;
+			padding:0px;
+		}
+		#inner 
+		{ 
+			border : 1px solid gray ;
+			width:308px;
+			height:320px;
+			overflow-y:scroll;
+		}
+		#frnd
+		{
+			padding:5px;
+			background-color: #ADD8E6;
+		}
+		#me
+		{
+			padding:5px;
+			background-color: #FAFAD2;
+		}
+	</style>	
+	<script>
+		function init()
+		{
+			ev=new EventSource("server.php");
+			ev.addEventListener("Data",populate,true);
+			txt=document.getElementById("mssg")
+			chatbox=document.getElementById("inner")
+			sd=document.getElementById("snd");
+			sd.onclick=Send;
+		}
+
+		function populate(event)
+		{	
+			chatbox.innerHTML+="<div id='frnd' align='right'><span style='font-size:8pt'>Admin</span> :<br> "+event.data+"</div>";
+		}
+		function Send()
+		{
+			chatbox.innerHTML+="<div id='me'> <span style='font-size:8pt'>Me</span>:<br> "+txt.value+"</div>";
+			xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=Update;
+			xhr.open("GET","update1.php?data="+txt.value,true);
+			xhr.send();
+			txt.value = "";
+		}
+		function Update()
+		{
+			if(xhr.readyState==4 && xhr.status==200)
+			{
+				//Do nothing
+			}
+		}
+		function check(e)
+		{
+			console.log("Check");
+			if(e.keyCode == 13)
+			{
+				Send();
+			}
+		}
+	
+	</script>
+</head>
+<body onload="init()" background="img/BG_white.png">
+<center><a href="company.html">-----HOME------</a></center>
+	<center><div id="outer">
+		<div width="100%">
+			Customer-Care Live Chat Unit of FastTech IT Solutions
+		</div>
+		<div id="inner">
+		</div>
+		<input type="text"  id ="mssg" onkeypress="check(event)"/> 
+	</div></center>
+	<center><img src = "img/Business_card_Front.jpg" height="180" width="400"></center>
+
+</body>
+</html>

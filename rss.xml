@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<flow>
+
+  <item>
+    <title>News-1</title>
+    <link>- http://www.techmeme.com</link>
+    <description> *  News from  Techmeme *</description>
+  </item>
+  <item>
+    <title>News-2</title>
+    <link>https://slashdot.org/</link>
+    <description>  *  News from Slash-Dot  *</description>
+  </item>
+  <item>
+    <title>News-3</title>
+    <link> http://news.ycombinator.com</link>
+    <description> * News from YC Hackers * </description>
+  </item>
+  <item>
+    <title>News-4</title>
+    <link> http://hackernews.org/</link>
+    <description> * News from HackerNews * </description>
+  </item>  
+</flow>
+
+</rss>

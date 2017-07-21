@@ -1,0 +1,23 @@
+<div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div >
+        <img src="img/lock.jpg" class="img-circle"alt="Lock Package"  width="400" height="300">
+        <p><strong>FastTech-Security Pack</strong></p>
+        <p>Complete package for corporate and offices!</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div >
+        <img src="img/office1.jpg" class="img-circle" alt="Locked"  width="400" height="300">
+        <p><strong>Security Solution to many Hotels</strong></p>
+        <p>Security at Vivanta</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div >
+        <img src="img/office2.jpg" class="img-circle" alt="Software"  width="400" height="300">
+        <p><strong>Web-Admin Software</strong></p>
+        <p>Designed a new software for Web-LogIns</p>
+      </div>
+    </div>
+  </div>
